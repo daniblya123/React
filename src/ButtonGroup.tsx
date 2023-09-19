@@ -1,13 +1,17 @@
 import { useState } from "react";
 
-function ButtonGroup() {
-  const buttons = ["Red", "Green", "Blue"];
+interface ButtonGroupProps {
+  heading: string;
+  buttonNames: string[];
+}
+
+function ButtonGroup({ heading, buttonNames }: ButtonGroupProps) {
   const [buttonText, setButtonText] = useState("");
 
   const handleButtonClick = (button: string) =>
     setButtonText(button + " was pressed!");
 
-  const buttonTags = buttons.map((button) => (
+  const buttonTags = buttonNames.map((button) => (
     <button
       type="button"
       key={button}
@@ -19,6 +23,7 @@ function ButtonGroup() {
 
   return (
     <>
+      <h2>{heading}</h2>
       <div className="flex-container">{buttonTags}</div>
       <p>{buttonText}</p>
     </>
