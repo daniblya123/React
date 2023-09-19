@@ -3,13 +3,20 @@ import { useState } from "react";
 interface ButtonGroupProps {
   heading: string;
   buttonNames: string[];
+  onButtonPressed: () => void;
 }
 
-function ButtonGroup({ heading, buttonNames }: ButtonGroupProps) {
+function ButtonGroup({
+  heading,
+  buttonNames,
+  onButtonPressed,
+}: ButtonGroupProps) {
   const [buttonText, setButtonText] = useState("");
 
-  const handleButtonClick = (button: string) =>
+  const handleButtonClick = (button: string) => {
     setButtonText(button + " was pressed!");
+    onButtonPressed();
+  };
 
   const buttonTags = buttonNames.map((button) => (
     <button
