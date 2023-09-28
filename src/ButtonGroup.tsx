@@ -7,7 +7,7 @@ function ButtonGroup() {
   const handleButtonClick = (button: string) =>
     setButtonText(button + " was pressed!");
 
-  const buttonTags = buttons.map((button) => (
+  const buttonTags = buttons.map(button => (
     <button
       type="button"
       key={button}
