@@ -1,28 +1,16 @@
-import { useState } from "react";
-import ButtonGroup from "./ButtonGroup";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import NewsPage from "./pages/NewsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
-function App() {
-  const colourButtonNames = ["Red", "Green", "Blue"];
-  const countryButtonNames = ["England", "France", "Germany"];
-
-  const [timesButtonPressed, setTimesButtonPressed] = useState(0);
-  const handleButtonPressed = () =>
-    setTimesButtonPressed(timesButtonPressed + 1);
-
+export function App() {
   return (
     <>
-      <h1>Hello World!</h1>
-      <p>Buttons have been pressed {timesButtonPressed} times in total.</p>
-      <ButtonGroup
-        heading="Colour Buttons"
-        buttonNames={colourButtonNames}
-        onButtonPressed={handleButtonPressed}
-      />
-      <ButtonGroup
-        heading="Country Buttons"
-        buttonNames={countryButtonNames}
-        onButtonPressed={handleButtonPressed}
-      />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="news" element={<NewsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   );
 }
