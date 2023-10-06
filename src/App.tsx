@@ -1,4 +1,5 @@
 import ButtonGroup from "./ButtonGroup";
+import ImageRow from "./ImageRow";
 
 function App() {
   const colourButtonNames = ["Red", "Green", "Blue"];
@@ -9,6 +10,7 @@ function App() {
       <h1>Hello World!</h1>
       <ButtonGroup heading="Colour Buttons" buttonNames={colourButtonNames} />
       <ButtonGroup heading="Country Buttons" buttonNames={countryButtonNames} />
+      <ImageRow />
     </>
   );
 }

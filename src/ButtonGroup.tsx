@@ -8,14 +8,14 @@ interface ButtonGroupProps {
 function ButtonGroup({ heading, buttonNames }: ButtonGroupProps) {
   const [buttonText, setButtonText] = useState("");
 
-  const handleButtonClick = (button: string) =>
-    setButtonText(button + " was pressed!");
+  /**const handleButtonClick = (button: string) =>
+    setButtonText(button + " was pressed!");**/
 
-  const buttonTags = buttonNames.map((button) => (
+  const buttonTags = buttonNames.map(button => (
     <button
       type="button"
       key={button}
-      onClick={() => handleButtonClick(button)}
+      /**onClick={() => handleButtonClick(button)}**/
     >
       {button}
     </button>
