@@ -1,11 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
 import { CONTACT_PATH, INDEX_PATH, NEWS_PATH } from "../constants/paths";
+import "../NavbarLayout.css"
 
 function Navbar() {
   return (
     <>
-      <nav>
-        <ul>
+      <div className="navbar">
+        <ul className = "navigation">
           <li>
             <Link to={INDEX_PATH}>Home</Link>
           </li>
@@ -16,7 +17,7 @@ function Navbar() {
             <Link to={CONTACT_PATH}>Contact</Link>
           </li>
         </ul>
-      </nav>
+        </div>
 
       <Outlet />
     </>

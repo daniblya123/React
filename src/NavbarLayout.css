@@ -1,0 +1,15 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    gap:5em;
+}
+
+ul{
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+li{
+    text-decoration: none;
+}
