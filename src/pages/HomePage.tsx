@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { NEWS_PATH } from "../constants/paths";
+import { NEWS_PATH, WEATHER_PATH } from "../constants/paths";
 
 function HomePage() {
   useEffect(() => {
@@ -12,6 +12,9 @@ function HomePage() {
       <h1>This is the Home Page.</h1>
       <p>
         Here is a link to the <Link to={NEWS_PATH}>News Page.</Link>
+      </p>
+      <p>
+        Here is a link to the <Link to={WEATHER_PATH}>Weather Page.</Link>
       </p>
     </>
   );
